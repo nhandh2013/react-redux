@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class Item extends Component {
-    removeItem(e) {
+    removeItem() {
         this.props.handleRemove(this.props.index);
     }
     render() {
