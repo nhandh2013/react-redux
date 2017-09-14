@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Item from './Item';
 import AddItem from './AddItem';
-
+import {connect} from 'react-redux';
 class ListItem extends Component {
-    constructor() {
-        super();
-        this.state = {
-            fruit: ["Banana", "Orange", "Apple", "Mango"]
-        }
-    }
+    // constructor() {
+    //     super();
+    //     this.state = {
+    //         fruit: ["Banana", "Orange", "Apple", "Mango"]
+    //     }
+    // }
     addItem(item) {
         this.state.fruit.push(item);
         this.setState(this.state);
@@ -22,7 +22,7 @@ class ListItem extends Component {
             <div>
                 <AddItem handleAdd={this.addItem.bind(this)}/>
                 {
-                    this.state.fruit.map((e,i) => (
+                    this.props.fruit.map((e,i) => (
                         <Item handleRemove={this.removeItem.bind(this)} key={i} name={e} index={i}/>
                     ))
                 }
@@ -31,4 +31,8 @@ class ListItem extends Component {
     }
 }
 
-export default ListItem;
+export default connect((state) => {return {fruit: state.fruit}})(ListItem);
+
+// export default connect(function(state) {
+//     return {fruit: state.fruit}
+// })(ListItem);
