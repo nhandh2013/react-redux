@@ -41,17 +41,14 @@ let reducer = combineReducers({
 let store = createStore(reducer, compose(
     window.devToolsExtension ? window.devToolsExtension() : f => f
 ));
-store.subscribe(() => {
-    var str = store.getState();
-    document.getElementById('p-detail').innerHTML = JSON.stringify(str);
-});
+store.subscribe(() => store.getState());
 
-store.dispatch({type: 'TOGGLE'})
-
-store.dispatch({type: 'ADD_ITEM', item: 'ABC'})
-
-store.dispatch({
-    type: 'REMOVE_ITEM',
-    index: 1
-})
+// store.dispatch({type: 'TOGGLE'})
+//
+// store.dispatch({type: 'ADD_ITEM', item: 'ABC'})
+//
+// store.dispatch({
+//     type: 'REMOVE_ITEM',
+//     index: 1
+// })
 export default store;

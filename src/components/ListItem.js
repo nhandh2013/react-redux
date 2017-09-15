@@ -10,12 +10,12 @@ class ListItem extends Component {
     //     }
     // }
     addItem(item) {
-        this.state.fruit.push(item);
-        this.setState(this.state);
+        this.props.fruit.push(item);
+        this.setState(this.props);
     }
     removeItem(index) {
-        this.state.fruit.splice(index, 1);
-        this.setState(this.state);
+        this.props.fruit.splice(index, 1);
+        this.setState(this.props);
     }
     render() {
         return (
