@@ -28,6 +28,7 @@ class AddItem extends Component {
         // this.showForm();
     }
     render() {
+        {console.log(this.props.toggleForm)}
         if(this.props.toggleForm) return (
             <div>
                 <form onSubmit={this.handleSubmit.bind(this)}>
@@ -42,6 +43,6 @@ class AddItem extends Component {
 }
 
 export default connect(function(state){
-    return { toggleForm: state.toggleForm}
+    return { toggleForm: state.toggle}
 })(AddItem);
 
