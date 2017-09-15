@@ -28,7 +28,7 @@ class AddItem extends Component {
         // this.showForm();
     }
     render() {
-        {console.log(this.props.toggleForm)}
+        
         if(this.props.toggleForm) return (
             <div>
                 <form onSubmit={this.handleSubmit.bind(this)}>
