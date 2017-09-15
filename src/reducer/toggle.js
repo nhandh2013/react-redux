@@ -7,4 +7,4 @@ let toggleReducer = (state = false, action) => {
     }
 }
 
-export default toggleReducer();
+export default toggleReducer;

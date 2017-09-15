@@ -9,4 +9,4 @@ let fruitReducer = ( state = ["Banana", "Orange", "Apple", "Mango"], action) => 
     }
 }
 
-export default fruitReducer();
+export default fruitReducer;
