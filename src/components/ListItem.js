@@ -31,7 +31,9 @@ class ListItem extends Component {
     }
 }
 
-export default connect((state) => {return {fruit: state.fruit}})(ListItem);
+export default connect(function(state) {
+    return { fruit: state.fruit}
+})(ListItem);
 
 // export default connect(function(state) {
 //     return {fruit: state.fruit}

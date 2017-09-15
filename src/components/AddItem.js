@@ -41,5 +41,7 @@ class AddItem extends Component {
     }
 }
 
-export default connect((state) => {return {toggleForm: state.toggleForm}})(AddItem);
+export default connect(function(state){
+    return { toggleForm: state.toggleForm}
+})(AddItem);
 

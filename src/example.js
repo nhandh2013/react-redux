@@ -43,12 +43,12 @@ let store = createStore(reducer, compose(
 ));
 store.subscribe(() => store.getState());
 
-// store.dispatch({type: 'TOGGLE'})
-//
-// store.dispatch({type: 'ADD_ITEM', item: 'ABC'})
-//
-// store.dispatch({
-//     type: 'REMOVE_ITEM',
-//     index: 1
-// })
+store.dispatch({type: 'TOGGLE'})
+
+store.dispatch({type: 'ADD_ITEM', item: 'ABC'})
+
+store.dispatch({
+    type: 'REMOVE_ITEM',
+    index: 1
+})
 export default store;
